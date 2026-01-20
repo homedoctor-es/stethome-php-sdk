@@ -141,4 +141,16 @@ class StethoMe
         return new Security($this->config);
     }
 
+    /**
+     * Dynamically handle missing methods.
+     *
+     * @param  string  $method
+     * @param  array  $parameters
+     * @return \Jlorente\StethoMe\Core\ApiInterface
+     */
+    public function compound()
+    {
+        return new Compound($this->config);
+    }
+
 }
